@@ -4,6 +4,7 @@ import requests
 import json
 import urllib.request
 
+#1. Crawler
 
 def valid():
         urllib.request.urlopen("https://3dnews.ru/").getcode()
@@ -13,7 +14,7 @@ def valid():
         else :
                 print('nu i idi nahuy')
 valid()
-#1.valid url
+#1.1. valid url
 
 now = datetime.now()
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
@@ -29,11 +30,11 @@ heads = soup.find_all('h1')
 heads_list = [i.get_text().strip() for i in heads]
 print(heads_list)
 
-#2. parser
+#1.2. parser
 
 with open('articles.json','w') as file:
         json.dump(heads_list, file, indent=2, ensure_ascii=False)
 
-#3. write json file
+#1.3. write json file
 
 
