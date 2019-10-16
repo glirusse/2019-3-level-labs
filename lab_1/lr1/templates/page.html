@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/css/my.css">
+    <title>Laboratornaya_rabota_Anikin&Ivanov</title>
+  </head>
+  <body>
+    <div>
+      <p>Web-site: {{link}}</p>
+        <ol class="rectangle">
+          {% for n in list %}
+         <li><a href="#">{{n['title']}}</a></li>
+        <hr>
+        {% endfor %}
+      </ol>
+      <form action="/redo/" method="POST">
+    <input type="submit" class="btn btn-dark" value="NEW">
+</form>
+    </div>
+  </body>
+</html>
