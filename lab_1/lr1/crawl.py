@@ -37,9 +37,11 @@ print(heads_list)
 
 # 1.2. parser
 now = datetime.now()
+author1 = Anikin
+author2 = Ivanov 
 articles = [{'title': i} for i in heads_list]
 articlesjs = {'url': 'https://3dnews.ru/', 'creation Date': '{0}'.format(now.strftime("%d/%m/%Y %H:%M:%S")),
-              'articles': articles}
+              'articles': articles, 'authors': author1, author2}
 with open("articles.json", "w") as file:
     json.dump(articlesjs, file, indent=2, ensure_ascii=False)
 # 1.3. json
