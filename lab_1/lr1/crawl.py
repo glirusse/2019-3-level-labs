@@ -7,10 +7,9 @@ import urllib.request
 
 # 1. Crawler
 
-def valid():
-    urllib.request.urlopen("https://3dnews.ru/").getcode()
-    r1 = urllib.request.urlopen("https://3dnews.ru/").getcode()
-    if r1 == 200:
+def valid(url):
+    r1 = requests.get(url)
+    if r1:
         return r1
     else:
         print('invalid URL')
