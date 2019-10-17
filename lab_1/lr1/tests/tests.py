@@ -16,6 +16,3 @@ class TestCrawler(unittest.TestCase):
 
     def test_articles(self):
         self.assertListEqual(articles, self.articles_expected)
-
-if __name__ = '__main__':
-    unittest.main()
