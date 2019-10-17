@@ -12,3 +12,6 @@ class TestCrawler(unittest.TestCase):
 
     def test_valid(self):
         self.assertEqual(valid(self.url).status_code, 200)
+
+if __name__='__main__':
+    unittest.main()
