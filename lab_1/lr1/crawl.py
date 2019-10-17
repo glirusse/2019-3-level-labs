@@ -14,8 +14,6 @@ def valid(url):
     else:
         print('invalid URL')
 
-
-valid()
 # 1.1. valid url
 
 siteurl = 'https://3dnews.ru/'
