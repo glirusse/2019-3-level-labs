@@ -1,5 +1,6 @@
 import unittest
 import requests
+from lab_1.lr1.crawl import valid
 
 
 def valid(url):
