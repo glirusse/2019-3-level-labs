@@ -13,6 +13,14 @@ def valid(url):
         return r1
     else:
         print('invalid URL')
+        
+def invalid(invalid_url):
+    r2 = requests.get(invalid_url)
+    if r2:
+        return r2
+    else:
+        print('valid URL')
+
 
 # 1.1. valid url
 
