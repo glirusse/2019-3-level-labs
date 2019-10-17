@@ -1,6 +1,6 @@
 import unittest
 import requests
-from lab_1.lr1.crawl import valid, invalid
+from lab_1.lr1.crawl import valid
 
 class TestCrawler(unittest.TestCase):
     def setUp(self):
@@ -10,5 +10,6 @@ class TestCrawler(unittest.TestCase):
     def test_valid(self):
         self.assertEqual(valid(self.url).status_code, 200)
 
-    def test_invalid(self):
-        self.assertEqual(invalid(self.invalid_url).status_code, 404)
+    def test_404(self):
+        res = valid(self.url)
+        self.assertNotEqual(res, 404)
