@@ -1,5 +1,5 @@
 import unittest
-from crawl import valid, articles
+from lab_1.lr1.crawl import valid, articles
 
 class TestCrawler(unittest.TestCase):
     def setUp(self):
